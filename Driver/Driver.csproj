@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>JernejK.NextionNET.Driver</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JernejK.NextionNET.Driver</RootNamespace>
+    <ProjectTypeGuids>{b69e3092-b931-443c-abe7-7e7b65f2a37f};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E52270A-08FA-40A8-91E7-4F10FF68301A}</ProjectGuid>
+    <TargetFrameworkVersion>v4.3</TargetFrameworkVersion>
+    <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE,MF_FRAMEWORK_VERSION_V4_3</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\JernejK.NextionNET.Driver.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
+  <ItemGroup>
+    <Compile Include="BackgroundFill.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="ControlCollection.cs" />
+    <Compile Include="Controls\Bases\ForeBackColorSurfaceControlBase.cs" />
+    <Compile Include="Controls\Bases\IntValueControlBase.cs" />
+    <Compile Include="Controls\Bases\TextControlBase.cs" />
+    <Compile Include="Controls\Bases\TextControlTextBase.cs" />
+    <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\Bases\ControlBase.cs" />
+    <Compile Include="Controls\DualStateButton.cs" />
+    <Compile Include="Controls\Gauge.cs" />
+    <Compile Include="Controls\Hidden\Timer.cs" />
+    <Compile Include="Controls\NumberBox.cs" />
+    <Compile Include="Controls\CropBox.cs" />
+    <Compile Include="Controls\PictureBox.cs" />
+    <Compile Include="Controls\ProgressBar.cs" />
+    <Compile Include="Controls\Bases\SurfaceControlBase.cs" />
+    <Compile Include="Controls\Slider.cs" />
+    <Compile Include="Controls\TextBox.cs" />
+    <Compile Include="Controls\Hidden\Variable.cs" />
+    <Compile Include="Controls\Waveform.cs" />
+    <Compile Include="HorizontalAlignment.cs" />
+    <Compile Include="INextionDisplay.cs" />
+    <Compile Include="INextionDisplayPrivate.cs" />
+    <Compile Include="NextionDisplay.GUIDesign.cs" />
+    <Compile Include="NextionDisplay.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemEventParameter.cs" />
+    <Compile Include="SystemEventType.cs" />
+    <Compile Include="TouchEventArgs.cs" />
+    <Compile Include="TouchEventXYArgs.cs" />
+    <Compile Include="TouchMode.cs" />
+    <Compile Include="CommandBuffer.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="VerticalAlignment.cs" />
+    <Compile Include="NextUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SPOT.Hardware" />
+    <Reference Include="Microsoft.SPOT.Hardware.SerialPort" />
+    <Reference Include="Microsoft.SPOT.Native">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Driver_Gadgeteer_43\Driver_Gadgeteer_43.csproj" />
+  </ItemGroup>
+</Project>
